@@ -1,23 +1,18 @@
 import { useState } from 'react';
 import './App.css';
-import Category from './components/Category';
+import HomeClass from './components/Home/HomeClass';
+import HomeNotClass from './components/Home/HomeNotClass';
 
 function App() {
-  const [xepHang, setXepHang] = useState(0);
-  const [dongPhuc, setDongPhuc] = useState(0);
-  const [theHocSinh, setTheHocSinh] = useState(0);
-  const [huyHieuDoan, setHuyHieuDoan] = useState(0);
-  const [dauToc, setDauToc] = useState(0);
+    const [clazz, setClazz] = useState("");
+    const [clazzDone, setClazzDone] = useState(false);
 
-  return (
-    <div className='App'>
-      <Category title="Xếp hàng" field={xepHang} update={setXepHang} />
-      <Category title="Đồng phục" field={dongPhuc} update={setDongPhuc} />
-      <Category title="Thẻ học sinh" field={theHocSinh} update={setTheHocSinh} />
-      <Category title="Huy hiệu đoàn" field={huyHieuDoan} update={setHuyHieuDoan} />
-      <Category title="Đầu tóc" field={dauToc} update={setDauToc} />
-    </div>
-  );
+    return (
+        <div className='App'>
+            <h3>Chấm nề nếp dưới sân</h3>
+            {(clazzDone) ? <HomeClass clazz={clazz} /> : <HomeNotClass setClazz={setClazz} setClazzDone={setClazzDone} />}
+        </div>
+    );
 }
 
 export default App;

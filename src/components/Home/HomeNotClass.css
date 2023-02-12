@@ -1,0 +1,28 @@
+.labelForm {
+    margin-right: 20px;
+}
+
+.inputText {
+    padding: 5px 10px 5px 10px;
+    font-family: inherit;
+    transition: 0.5s;
+}
+
+.inputText.clazz {
+    width: 70px;
+}
+
+.buttonForm {
+    margin-left: 20px;
+    padding: 5px 10px 5px 10px;
+    font-family: inherit;
+    color:white;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.buttonForm:active{
+    transform: scale(0.8);
+}
